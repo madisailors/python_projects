@@ -16,18 +16,17 @@ conn = sqlite3.connect('assignment.db')
 fileList = ('information.docx', 'hello.txt', 'myImage.png', \
             'myMovie.mpg', 'world.txt', 'data.pdf','myphoto.jpg')
 
-for i in range(1,4):
-    print(fileList[1],fileList[4])
-    
-with conn:
-    cur = conn.cursor()
-    cur.execute("INSERT INTO tbl_documents(col_name) \
-        VALUES (?)", \
-        ('hello.txt',))
-    cur.execute("INSERT INTO tbl_documents(col_name) \
-        VALUES(?)", \
-        ('world.txt',))
-    conn.commit()
+for i in fileList:
+    if i.endswith('.txt'):
+        with conn:
+            cur = conn.cursor()
+            cur.execute("INSERT INTO tbl_documents(col_name) \
+                VALUES (?)", \
+                (i,))
+            cur.execute("INSERT INTO tbl_documents(col_name) \
+                VALUES(?)", \
+                (i,))
+            conn.commit()
 conn.close()
 
 

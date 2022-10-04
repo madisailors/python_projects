@@ -29,4 +29,8 @@ conn.close()
 fileList = ('information.docx', 'hello.txt', 'myImage.png', \
             'myMovie.mpg', 'world.txt', 'data.pdf','myphoto.jpg')
 
+for i in range(1,4):
+    print(fileList[1],fileList[4])
+
                
+

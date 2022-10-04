@@ -8,7 +8,7 @@ class Person:
  
 class Student(Person):
     GPA = 3.8
-   
+    Grade = 8
 
 class Teacher(Person):
     Department = 'Physical Education'

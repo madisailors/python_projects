@@ -21,13 +21,14 @@ for i in fileList:
         with conn:
             cur = conn.cursor()
             cur.execute("INSERT INTO tbl_documents(col_name) \
-                VALUES (?)", \ #adding selected docs to table
+                VALUES (?)", \
                 (i,))
             conn.commit() #comitting changes to table
+            
+        print(i)
 conn.close()
 
 
-print(assignment.py)
  
 
 

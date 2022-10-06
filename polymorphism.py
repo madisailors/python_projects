@@ -11,13 +11,13 @@ class Electronic:
         return msg
 
 #child class
-def Laptop(Electronic):
+class Laptop(Electronic):
     device = "Macbook Pro"
     brand = "Apple"
     size = "15.6 inch"
 
 #child class
-def Tablet(Electronic):
+class Tablet(Electronic):
     device = "HP Chromebook X2 11"
     brand = "Google"
     size = "11 inch"

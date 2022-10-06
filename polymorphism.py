@@ -6,8 +6,9 @@ class Electronic:
     size = " "
     memory = "64 Gygabites"
 
-    def information(self): #function of parent class
+    def information(self): 
         msg = "\nDevice Type: {}\nBrand: {}\nSize: {}\nMemory: {}".format(self.device,self.brand,self.size,self.memory)
+        return msg
 
 #child class
 def Laptop(Electronic):

@@ -2,15 +2,18 @@
 class Protect:
     def __init__(self):
         self.__private1 = 10
+        self._protect1 = 5
 
     def getPrivate(self):
-        print(self.__private1)
+        print(self.__private1) #private double under score
 
-    def setPrivate(self, private):
-        self.__private1 = private
+
+    def getProtect(self):
+        print(self._protect1) #protected single underscore
+
+   
 
 
 ob = Protect()
 ob.getPrivate()
-ob.setPrivate(23)
-ob.getPrivate()
+ob.getProtect()

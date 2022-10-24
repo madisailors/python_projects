@@ -5,6 +5,7 @@ import os
 import shutil
 import datetime
 import os.path
+from os.path import join
 
 class ParentWindow(Frame):
     def __init__(self, master):
@@ -71,8 +72,11 @@ class ParentWindow(Frame):
 
         #using current time
         init_time_now = datetime.now()
-        datetime.timedelta
-        modified_time = os.path.getmtime(r"C:\Users\madis\OneDrive\Documents\GitHub\python_projects\Customer Destination\1.txt.txt")
+        datetime.timedelta(hours=24)
+        absolute_path = ("C:\Users\madis\OneDrive\Documents\GitHub\python_projects\Customer Destination")
+        relative_path = 
+        print(os.path.join(absolute_path, relative_path)
+        modified_time = os.path.getmtime(absolute_path)
         print(modified_time)
         
         #runs through each file in the source directory

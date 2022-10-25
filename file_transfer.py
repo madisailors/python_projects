@@ -72,18 +72,17 @@ class ParentWindow(Frame):
 
         #using current time
         init_time_now = datetime.now()
-        datetime.timedelta(hours=24)
-        absolute_path = ("C:\Users\madis\OneDrive\Documents\GitHub\python_projects\Customer Destination")
-        relative_path = 
-        print(os.path.join(absolute_path, relative_path)
+        v = datetime.timedelta(hours=24)
         modified_time = os.path.getmtime(absolute_path)
         print(modified_time)
         
         #runs through each file in the source directory
         for i in source_files:
-            #moves each file from the source to the destination
-            shutil.move(source + '/' + i, destination)
-            print(i + ' was successfully transferred.')
+            file_path = os.path.join(source_files, i)
+            if i < v:
+                #moves each file from the source to the destination
+                shutil.move(source + '/' + i, destination)
+                print(i + ' was successfully transferred.')
         
 
     def exit_program(self):

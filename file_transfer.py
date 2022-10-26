@@ -4,6 +4,7 @@ import tkinter.filedialog
 import os
 import shutil
 import datetime
+from datetime import timedelta
 import os.path
 from os.path import join
 
@@ -75,10 +76,10 @@ class ParentWindow(Frame):
             #using current time
             datetime.timedelta(hours=24)
             x = datetime.datetime.now() - timedelta(hours=24)
-            modified_time = os.path.getmtime(absolute_path)
-            print(modified_time)
-            file_path = os.path.join(source_files, i)
-            if modified_time < x:
+            file_path = os.path.join(source, i)
+            modified_time = os.path.getmtime(file_path)
+            m = datetime.datetime.fromtimestamp(modified_time)
+            if m > x:
                 #moves each file from the source to the destination
                 shutil.move(source + '/' + i, destination)
                 print(i + ' was successfully transferred.')

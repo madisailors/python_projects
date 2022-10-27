@@ -31,7 +31,7 @@ class ParentWindow(Frame):
     
     #defining function for text entry
     def customHTML(self):
-       v = self.entry
+       v = self.entry.get()
        customText = v
        customFile = open("index.html", "w")
        customContent = "<html>\n<body>\n<h1>" + customText + "</h1>\n</body>\n</html>"
